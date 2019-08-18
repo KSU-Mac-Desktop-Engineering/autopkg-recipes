@@ -14,6 +14,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Office2019Suite</string>
+		<key>DISPLAY_NAME</key>
+		<string>Office2019/365</string>
 		<key>REGION</key>
 		<string>2009112</string>
 		<key>INSTALLERTYPE</key>
@@ -28,6 +30,8 @@
 		<dict>
 			<key>icon_name</key>
 			<string>%MUNKI_ICON%</string>
+			<key>%display_name%</key>
+			<string>DISPLAY_NAME</string>
 			<key>blocking_applications</key>
 			<array>
 					<string>Microsoft AutoUpdate</string>
