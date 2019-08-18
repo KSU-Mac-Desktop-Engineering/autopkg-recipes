@@ -22,6 +22,8 @@
 		<string>https://go.microsoft.com/fwlink/?linkid=</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/microsoft</string>
+		<key>MUNKI_ICON</key>
+        	<string>MSOffice2016.png</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
