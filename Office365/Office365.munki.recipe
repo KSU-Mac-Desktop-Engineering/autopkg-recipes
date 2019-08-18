@@ -14,8 +14,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>Office2019Suite</string>
-		<key>display_name<key>
-		<string>MicrosoftOffice2019</string>
 		<key>REGION</key>
 		<string>2009112</string>
 		<key>INSTALLERTYPE</key>
