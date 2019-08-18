@@ -30,8 +30,8 @@
 		<dict>
 			<key>icon_name</key>
 			<string>%MUNKI_ICON%</string>
-			<key>%display_name%</key>
-			<string>DISPLAY_NAME</string>
+			<key>display_name</key>
+			<string>%DISPLAY_NAME%</string>
 			<key>blocking_applications</key>
 			<array>
 					<string>Microsoft AutoUpdate</string>
