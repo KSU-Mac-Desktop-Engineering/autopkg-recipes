@@ -27,13 +27,13 @@ vl2016 for Office 2016
 		<key>NAME</key>
 		<string>Office2019Suite</string>
 		<key>REGION</key>
-		<string>525133</string>
+		<string>2009112</string>
 		<key>INSTALLERTYPE</key>
 		<string>o365</string>
 		<key>DOWNLOAD_URL_BASE</key>
 		<string>https://go.microsoft.com/fwlink/?linkid=</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/Office2019</string>
+		<string>apps/microsoft</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>blocking_applications</key>
@@ -44,12 +44,80 @@ vl2016 for Office 2016
 					<string>Microsoft PowerPoint</string>
 					<string>Microsoft Word</string>
 					<string>Microsoft OneNote</string>
+					<string>Microsoft Teams</string>
 			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
-		</dict>
+			<key>installer_choices_xml</key>
+			<array>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>0</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.autoupdate</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.teams</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.excel</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>0</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.OneDrive</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.onenote.mac</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.outlook</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.powerpoint</string>
+				</dict>
+				<dict>
+					<key>attributeSetting</key>
+					<integer>1</integer>
+					<key>choiceAttribute</key>
+					<string>selected</string>
+					<key>choiceIdentifier</key>
+					<string>com.microsoft.word</string>
+				</dict>
+			</array>
+			</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.1</string>
