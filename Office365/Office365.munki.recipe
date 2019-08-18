@@ -14,6 +14,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Office2019Suite</string>
+		<key>display_name<key>
+		<string>Microsoft Office 2019/365</string>
 		<key>REGION</key>
 		<string>2009112</string>
 		<key>INSTALLERTYPE</key>
@@ -26,6 +28,8 @@
         	<string>MSOffice2016.png</string>
 		<key>pkginfo</key>
 		<dict>
+			<key>icon_name</key>
+			<string>%MUNKI_ICON%</string>
 			<key>blocking_applications</key>
 			<array>
 					<string>Microsoft AutoUpdate</string>
