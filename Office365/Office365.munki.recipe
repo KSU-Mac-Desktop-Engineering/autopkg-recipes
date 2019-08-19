@@ -26,6 +26,8 @@
 		<string>apps/microsoft</string>
 		<key>MUNKI_ICON</key>
         	<string>MSOffice2016.png</string>
+		<key>MINIMUM_OS_VERSION</key>
+		<string>10.12</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>icon_name</key>
