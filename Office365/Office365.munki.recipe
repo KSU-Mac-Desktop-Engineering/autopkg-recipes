@@ -34,6 +34,8 @@
 			<string>%MUNKI_ICON%</string>
 			<key>display_name</key>
 			<string>%DISPLAY_NAME%</string>
+			<key>minimum_os_version</key>
+			<string>%MINIMUM_OS_VERSION%</string>
 			<key>blocking_applications</key>
 			<array>
 					<string>Microsoft AutoUpdate</string>
