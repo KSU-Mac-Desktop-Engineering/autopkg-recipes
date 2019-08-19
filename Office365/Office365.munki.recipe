@@ -50,6 +50,10 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Productivity</string>
+			<key>developer</key>
+			<string>Microsoft</string>
 			<key>installer_choices_xml</key>
 			<array>
 				<dict>
