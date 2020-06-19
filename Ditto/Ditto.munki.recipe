@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Ditto Connect and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>io.github.dev-yeet.munki.DittoConnect</string>
+	<string>com.github.dev-yeet.munki.DittoConnect</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.4.1</string>
 	<key>ParentRecipe</key>
-	<string>io.github.dev-yeet.download.DittoConnect</string>
+	<string>com.github.dev-yeet.download.DittoConnect</string>
 	<key>Process</key>
 	<array>
 		<dict>
