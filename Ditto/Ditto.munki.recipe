@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Ditto Connect</string>
+		<string>Ditto</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>MUNKI_CATEGORY</key>
@@ -27,7 +27,7 @@
 			<key>developer</key>
 			<string>Air Squirrels</string>
 			<key>display_name</key>
-			<string>Ditto Connect</string>
+			<string>Ditto</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
