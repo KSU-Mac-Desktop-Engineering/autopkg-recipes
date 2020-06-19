@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Ditto Connect Client</string>
 	<key>Identifier</key>
-	<string>io.github.dev-yeet.download.DittoConnect</string>
+	<string>com.github.dev-yeet.download.DittoConnect</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
