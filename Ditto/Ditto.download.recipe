@@ -12,7 +12,7 @@
 		<string>DittoConnect</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>2.0</string>
+	<string>1.4.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
