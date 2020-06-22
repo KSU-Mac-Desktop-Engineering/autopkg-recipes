@@ -41,7 +41,7 @@
 
 cp -r /Applications/Ditto.app/Contents/Resources/User-Space/SquirrelsLoopbackAudioDriver.driver /Library/Audio/Plug-Ins/HAL
 
-				exit 0</string>
+exit 0</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
