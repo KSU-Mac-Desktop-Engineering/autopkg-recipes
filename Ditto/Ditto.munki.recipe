@@ -39,8 +39,8 @@
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
 
-cp -r /Applications/Ditto.app/Contents/Resources/User-Space/SquirrelsLoopbackAudioDriver.driver /Library/Audio/Plug-Ins/HAL
-exit 0</string>
+cp -r /Applications/Ditto.app/Contents/Resources/User-Space/SquirrelsLoopbackAudioDriver.driver /Library/Audio/Plug-Ins/HAL/SquirrelsLoopbackAudioDriver.driver
+				exit 0</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
