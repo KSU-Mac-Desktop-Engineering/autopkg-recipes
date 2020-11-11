@@ -38,8 +38,10 @@
 			<true/>
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
-
+				
+#copy driver from application to /Library/Audio/Plug-Ins/Hal/ to prevent driver prompt on launch
 cp -r /Applications/Ditto.app/Contents/Resources/User-Space/SquirrelsLoopbackAudioDriver.driver /Library/Audio/Plug-Ins/HAL/SquirrelsLoopbackAudioDriver.driver
+
 exit 0</string>
 		</dict>
 	</dict>
