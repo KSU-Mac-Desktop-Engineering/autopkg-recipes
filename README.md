@@ -1,0 +1,1 @@
+# ksu-munki-recipes
