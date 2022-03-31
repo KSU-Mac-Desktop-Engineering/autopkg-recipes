@@ -8,6 +8,8 @@
 	<string>com.github.KSU-Mac-Desktop-Engineering.munki.MacAdminsPython</string>
 	<key>Input</key>
 	<dict>
+		<key>INCLUDE_PRERELEASES</key>
+		<string>False</string>
 		<key>NAME</key>
 		<string>MacAdminsPython</string>
 		<key>MUNKI_REPO_SUBDIR</key>
