@@ -43,14 +43,16 @@
 			<key>minimum_os_version</key>
 			<string>11.0</string>
 			<key>blocking_applications</key>
-			<array>
-					<string>Microsoft AutoUpdate</string>
-					<string>Microsoft Outlook</string>
-					<string>Microsoft Excel</string>
-					<string>Microsoft PowerPoint</string>
-					<string>Microsoft Word</string>
-					<string>Microsoft OneNote</string>
-			</array>
+            <array>
+                <string>Microsoft AutoUpdate</string>
+                <string>Microsoft Excel</string>
+                <string>Microsoft OneNote</string>
+                <string>Microsoft Outlook</string>
+                <string>Microsoft PowerPoint</string>
+                <string>Microsoft Word</string>
+            </array>
+            <key>force_install_after_date</key>
+            <date>2123-03-03T17:00:00Z</date>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
@@ -58,10 +60,10 @@
 			<key>category</key>
 			<string>Productivity</string>
 			<key>supported_architectures</key>
-			<array>
-				<string>x86_64</string>
-				<string>arm64</string>
-			</array>
+            <array>
+                <string>arm64</string>
+                <string>x86_64</string>
+            </array>
 			<key>developer</key>
 			<string>Microsoft</string>
 			<key>RestartAction</key>
@@ -224,11 +226,13 @@
 				<string>CFBundleShortVersionString</string>
 			</dict>
 		</dict>
-		<dict>
+        <dict>
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
@@ -236,8 +240,6 @@
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
