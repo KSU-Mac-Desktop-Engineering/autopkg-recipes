@@ -3,29 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest Microsoft Office 2019 SKU-less installer package.
-		
-</string>
+	<string>Downloads the latest Microsoft Office 2019 SKU-less installer package.</string>
 	<key>Identifier</key>
 	<string>com.github.KSU-Mac-Desktop-Engineering.munki.Microsoft365</string>
-	<key>ParentRecipe</key>
-	<string>com.github.autopkg.office-recipes.download.Office2019Suite</string>
 	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Microsoft 365</string>
 		<key>DISPLAY_NAME</key>
+		<string>Microsoft 365</string>
+		<key>DOWNLOAD_URL_BASE</key>
+		<string>https://go.microsoft.com/fwlink/?linkid=</string>
+		<key>INSTALLERTYPE</key>
+		<string>o365</string>
+		<key>MUNKI_ICON</key>
+		<string>Microsoft365.png</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/microsoft</string>
+		<key>NAME</key>
 		<string>Microsoft 365</string>
 		<key>REGION</key>
 		<string>2009112</string>
-		<key>INSTALLERTYPE</key>
-		<string>o365</string>
-		<key>DOWNLOAD_URL_BASE</key>
-		<string>https://go.microsoft.com/fwlink/?linkid=</string>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/microsoft</string>
-		<key>MUNKI_ICON</key>
-        <string>Microsoft365.png</string>
 		<key>pkg_ids_set_optional_true</key>
 		<array>
 			<string>com.microsoft.package.Microsoft_AutoUpdate.app</string>
@@ -36,38 +32,31 @@
 		</array>
 		<key>pkginfo</key>
 		<dict>
-			<key>icon_name</key>
-			<string>%MUNKI_ICON%</string>
-			<key>display_name</key>
-			<string>%DISPLAY_NAME%</string>
-			<key>minimum_os_version</key>
-			<string>11.0</string>
+			<key>RestartAction</key>
+			<string>RequireRestart</string>
 			<key>blocking_applications</key>
-            <array>
-                <string>Microsoft AutoUpdate</string>
-                <string>Microsoft Excel</string>
-                <string>Microsoft OneNote</string>
-                <string>Microsoft Outlook</string>
-                <string>Microsoft PowerPoint</string>
-                <string>Microsoft Word</string>
-            </array>
-            <key>force_install_after_date</key>
-            <date>2123-03-03T17:00:00Z</date>
+			<array>
+				<string>Microsoft AutoUpdate</string>
+				<string>Microsoft Excel</string>
+				<string>Microsoft OneNote</string>
+				<string>Microsoft Outlook</string>
+				<string>Microsoft PowerPoint</string>
+				<string>Microsoft Word</string>
+			</array>
 			<key>catalogs</key>
 			<array>
 				<string>testing</string>
 			</array>
 			<key>category</key>
 			<string>Productivity</string>
-			<key>supported_architectures</key>
-            <array>
-                <string>arm64</string>
-                <string>x86_64</string>
-            </array>
 			<key>developer</key>
 			<string>Microsoft</string>
-			<key>RestartAction</key>
-			<string>RequireRestart</string>
+			<key>display_name</key>
+			<string>%DISPLAY_NAME%</string>
+			<key>force_install_after_date</key>
+			<date>2123-03-03T17:00:00Z</date>
+			<key>icon_name</key>
+			<string>%MUNKI_ICON%</string>
 			<key>installer_choices_xml</key>
 			<array>
 				<dict>
@@ -135,15 +124,22 @@
 					<string>com.microsoft.word</string>
 				</dict>
 			</array>
-			</dict>
+			<key>minimum_os_version</key>
+			<string>11.0</string>
+			<key>supported_architectures</key>
+			<array>
+				<string>arm64</string>
+				<string>x86_64</string>
+			</array>
+		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.7</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.office-recipes.download.Office2019Suite</string>
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -151,10 +147,10 @@
 				<key>flat_pkg_path</key>
 				<string>%pathname%</string>
 			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -162,10 +158,10 @@
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/Microsoft_Excel_Internal.pkg/Payload</string>
 			</dict>
-		</dict>		
-		<dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -173,10 +169,10 @@
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/Microsoft_OneNote_Internal.pkg/Payload</string>
 			</dict>
-		</dict>	
-		<dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -184,10 +180,10 @@
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/Microsoft_Outlook_Internal.pkg/Payload</string>
 			</dict>
-		</dict>	
-		<dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -195,10 +191,10 @@
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/Microsoft_PowerPoint_Internal.pkg/Payload</string>
 			</dict>
-		</dict>	
-		<dict>
 			<key>Processor</key>
 			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -206,12 +202,14 @@
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/Microsoft_Word_Internal.pkg/Payload</string>
 			</dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>MunkiInstallsItemsCreator</string>
 			<key>Arguments</key>
 			<dict>
+				<key>faux_root</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 				<key>installs_item_paths</key>
 				<array>
 					<string>/Applications/Microsoft Excel.app</string>
@@ -220,19 +218,17 @@
 					<string>/Applications/Microsoft PowerPoint.app</string>
 					<string>/Applications/Microsoft Word.app</string>
 				</array>
-				<key>faux_root</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 				<key>version_comparison_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Processor</key>
 			<string>MunkiPkginfoMerger</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
@@ -240,14 +236,14 @@
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>MunkiOptionalReceiptEditor</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
 			<key>Arguments</key>
 			<dict>
 				<key>path_list</key>
@@ -255,6 +251,8 @@
 					<string>%RECIPE_CACHE_DIR%/pkgroot/Applications</string>
 				</array>
 			</dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
 		</dict>
 	</array>
 </dict>
