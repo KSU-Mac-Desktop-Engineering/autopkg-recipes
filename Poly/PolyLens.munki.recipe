@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Poly Lens and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.ksu-mac-de.munki.PolyLens</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Poly Lens</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/poly/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>MUNKI_ICON</key>
+		<string>polylens.png</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Allows end-users to customize their settings and get visible status of their Poly Lens audio device on their desktop.</string>
+			<key>developer</key>
+			<string>Poly</string>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>icon_name</key>
+			<string>%MUNKI_ICON%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+            <key>blocking_applications</key>
+			<array>
+					<string>Poly Lens</string>
+			</array>
+			<key>uninstall_method</key>
+        	<string>uninstall_script</string>
+        	<key>uninstall_script</key>
+      		<string>#!/bin/bash
+rm -rf "/Applications/Poly Lens.app"</string>
+        </dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.4.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.pkg.polylens</string>
+	<key>Process</key>
+	<array>
+        <dict>
+			<key>Processor</key>
+			<string>MunkiInstallsItemsCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>installs_item_paths</key>
+				<array>
+					<string>/Applications/Poly Lens.app</string>
+				</array>
+				<key>faux_root</key>
+				<string>%pkgroot%</string>
+				<key>version_comparison_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+		</dict>
+        <dict>
+			<key>Processor</key>
+			<string>MunkiPkginfoMerger</string>
+		</dict>
+        <dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pkg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
