@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of Network Share Mounter and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.KSU-Mac-Desktop-Engineering.munki.networkShareMounter</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Network Share Mounter</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>MUNKI_ICON</key>
+		<string></string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Automatically mount network shares on Mac</string>
+			<key>developer</key>
+			<string>RRZE FAU</string>
+			<key>display_name</key>
+			<string>%NAME%</string>
+			<key>icon_name</key>
+			<string>%MUNKI_ICON%</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.4.1</string>
+	<key>ParentRecipe</key>
+	<string>de.fau.rrze.download.networkShareMounter</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>munkiimport_appname</key>
+				<string>%NAME%.app</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
