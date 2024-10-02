@@ -53,8 +53,6 @@
 			<string>Microsoft</string>
 			<key>display_name</key>
 			<string>%DISPLAY_NAME%</string>
-			<key>force_install_after_date</key>
-			<date>2123-03-03T17:00:00Z</date>
 			<key>icon_name</key>
 			<string>%MUNKI_ICON%</string>
 			<key>installer_choices_xml</key>
