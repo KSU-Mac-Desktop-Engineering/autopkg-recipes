@@ -24,11 +24,6 @@
         <string>Adobe Creative Cloud App</string>
         <key>name</key>
         <string>Adobe Creative Cloud App</string>
-		<key>supported_architectures</key>
-		<array>
-			<string>x86_64</string>
-            <string>arm64</string>
-		</array>
         <key>unattended_install</key>
         <true/>
         <key>uninstall_method</key>
